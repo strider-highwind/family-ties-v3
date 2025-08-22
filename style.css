@@ -1,0 +1,51 @@
+
+:root{
+  --bg:#0b1b2d;
+  --card:#122536;
+  --acc:#f3c24b;
+  --text:#e8eef6;
+  --muted:#9fb3c9;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:radial-gradient(1200px 800px at 30% -20%,#1a3150, #071320), var(--bg);
+  color:var(--text); font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+#app{ max-width:1100px; margin:0 auto; padding:16px }
+header{ display:flex; align-items:center; gap:16px; padding:8px 0 16px; }
+.logo{ width:64px; height:64px; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,.4) }
+.title h1{ margin:0; letter-spacing:1px }
+.title p{ margin:0; color:var(--muted) }
+footer{ display:flex; justify-content:space-between; padding:12px 0; color:var(--muted); font-size:14px }
+.card{ background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); border-radius:16px; padding:16px; box-shadow:0 10px 30px rgba(0,0,0,.25) }
+.grid.two{ display:grid; grid-template-columns:1fr 1fr; gap:16px }
+input{ width:100%; padding:10px 12px; background:#0e2234; color:var(--text); border:1px solid #1e3a54; border-radius:10px; margin-bottom:8px }
+button{ background:linear-gradient(#f8d46c,#e8b52f); color:#1d1a10; font-weight:700; border:0; padding:10px 16px; border-radius:10px; cursor:pointer; box-shadow:0 6px 16px rgba(0,0,0,.35) }
+button:hover{ filter:brightness(.98) }
+.players{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:8px 0 }
+.players .p{ background:#0f1f31; border:1px solid #22374d; border-radius:12px; padding:8px }
+.players .seat{ color:var(--muted); font-size:12px }
+.players .name{ font-size:16px; font-weight:700 }
+.status{ margin:8px 0 12px; color:var(--muted) }
+#hand{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; min-height:130px }
+.cardwrap{ width:80px; height:112px; }
+.cardimg{ width:80px; height:112px; border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,.35); transition:transform .15s ease, opacity .2s, box-shadow .15s ease }
+.cardimg:hover{ transform:translateY(-4px) scale(1.04); box-shadow:0 12px 22px rgba(0,0,0,.45) }
+.cardimg.dragging{ opacity:.5 }
+.cardimg.small{ width:64px; height:90px }
+#table{ display:flex; justify-content:center; gap:18px; margin:10px 0; flex-wrap:wrap }
+.played{ padding:8px; background:#1a3249; border:1px dashed #3d5e7e; border-radius:10px; display:flex; flex-direction:column; align-items:center }
+.mono{ font-family:ui-monospace, SFMono-Regular, Menlo, monospace }
+.badge{ display:inline-block; padding:2px 8px; border-radius:999px; background:#213b57; border:1px solid #33597c; font-size:12px; color:var(--muted) }
+#scores{ margin-top:14px; display:grid; grid-template-columns:2fr 1fr; gap:12px }
+table{ border-collapse:collapse }
+td,th{ padding:6px 10px; border-bottom:1px solid #254261 }
+#chat{ background:#0f1f31; border:1px solid #22374d; border-radius:12px; display:flex; flex-direction:column; height:300px; overflow:hidden }
+#chatLog{ flex:1; overflow:auto; padding:8px }
+#chatForm{ display:flex; gap:6px; padding:8px; border-top:1px solid #22374d }
+#chat .time{ color:var(--muted); font-size:12px; margin-right:6px }
+#chat .name{ font-weight:700 }
+#chat .msg{ word-break:break-word }
+#dropzone{ padding:14px; border:2px dashed #33597c; border-radius:10px; min-width:220px; text-align:center; opacity:.85 }
+#dropzone.over{ background:rgba(255,255,255,0.06) }
+.flying{ transition:transform .28s ease, opacity .28s ease }

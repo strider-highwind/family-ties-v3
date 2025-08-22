@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="6" y="6" rx="18" ry="18" width="288" height="408" fill="#10253a" stroke="#f3c24b" stroke-width="6" filter="url(#shadow)"/>
+  <g font-family="ui-monospace,Menlo,Consolas,monospace" fill="#e8eef6">
+    <text x="22" y="44" font-size="28" font-weight="700">Q</text>
+    <text x="22" y="70" font-size="26">♠</text>
+    <g transform="rotate(180 150 210)">
+      <text x="22" y="44" font-size="28" font-weight="700">Q</text>
+      <text x="22" y="70" font-size="26">♠</text>
+    </g>
+  </g>
+  <g text-anchor="middle" fill="#f3c24b" font-family="Georgia, serif">
+    <text x="150" y="230" font-size="160" stroke="none">♠</text>
+  </g>
+  <g text-anchor="middle" fill="#f3c24b" font-family="ui-serif, Georgia, serif">
+    <text x="150" y="120" font-size="44" opacity="0.85">Q</text>
+  </g>
+</svg>

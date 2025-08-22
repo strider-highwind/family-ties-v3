@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Family Ties — Spades</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="logo.png" alt="Family Ties" class="logo">
+      <div class="title">
+        <h1>Family Ties</h1>
+        <p>Multiplayer Spades</p>
+      </div>
+    </header>
+
+    <main id="view"></main>
+
+    <footer>
+      <span>Built with Socket.IO • Room: <strong id="roomId">—</strong></span>
+      <span class="right">Team NS vs EW • Prototype</span>
+    </footer>
+  </div>
+
+  <template id="tmpl-lobby">
+    <section class="card">
+      <h2>Lobby</h2>
+      <div class="grid two">
+        <div>
+          <h3>Create Room</h3>
+          <input id="createName" placeholder="Your name">
+          <input id="createRoom" placeholder="Room name (optional)">
+          <button id="btnCreate">Create</button>
+        </div>
+        <div>
+          <h3>Join Room</h3>
+          <input id="joinName" placeholder="Your name">
+          <input id="joinRoom" placeholder="Room ID">
+          <button id="btnJoin">Join</button>
+        </div>
+      </div>
+      <details>
+        <summary>Persistent Lobbies</summary>
+        <div id="roomsList"></div>
+      </details>
+    </section>
+  </template>
+
+  <template id="tmpl-room">
+    <section class="card">
+      <h2>Room <span class="mono" data-bind="roomId"></span></h2>
+      <div class="players" id="players"></div>
+      <div class="status" id="status"></div>
+      <div id="controls"></div>
+      <div id="table"></div>
+      <div id="hand"></div>
+      <div id="scores"></div>
+    </section>
+  </template>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

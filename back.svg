@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420">
+  <rect x="6" y="6" rx="18" ry="18" width="288" height="408" fill="#0b1b2d" stroke="#f3c24b" stroke-width="6"/>
+  <g transform="translate(150,210)" fill="#f3c24b">
+    <path d="M0 -130 C 60 -90, 110 -40, 110 10 C 110 70, 60 110, 0 130 C -60 110, -110 70, -110 10 C -110 -40, -60 -90, 0 -130 Z" fill="none" stroke="#f3c24b" stroke-width="6"/>
+    <text x="0" y="16" font-size="42" text-anchor="middle" font-family="Georgia" >Family Ties</text>
+  </g>
+</svg>
